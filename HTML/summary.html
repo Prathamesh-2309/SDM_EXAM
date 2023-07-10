@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body onload="displayData()" style="margin-top: 200px;">
+
+
+
+    <div>
+        <table style="border: 1px solid black;width: 100%;text-align: center;">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>10th %</th>
+                    <th>12th %</th>
+                    <th>Degree</th>
+                    <th>University</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;">
+                <tr id="data">
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function displayData() {
+
+            var row = document.getElementById("data")
+            row.innerHTML = `
+                            <tr></tr>
+                            <td>${sessionStorage.getItem("username")}</td>
+                            <td>${sessionStorage.getItem("password")}</td>
+                            <td>${sessionStorage.getItem("email")}</td>
+                            <td>${sessionStorage.getItem("age")}</td>
+                            <td>${sessionStorage.getItem("genderm")}</td>
+                            <td>${sessionStorage.getItem("address")}</td>
+                            <td>${sessionStorage.getItem("10")}</td>
+                            <td>${sessionStorage.getItem("12")}</td>
+                            <td>${sessionStorage.getItem("degree")}</td>
+                            <td>${sessionStorage.getItem("university")}</td>
+                            
+                            `
+
+
+        }
+    </script>
+
+</body>
+
+</html>
